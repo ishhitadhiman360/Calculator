@@ -35,7 +35,7 @@ for(var i=0; i< buttons.length; i++)
             {
                 //extract operand2 from display
                  operand2 = parseFloat(display.innerText);
-                 if(operand2 == '0' && operator =='/')
+                 if(operand2 == '0' && operator =='/')// if operation is division but denominator is zero 
                  {
                     display.innerText= "Invalid";
                  }
@@ -51,6 +51,7 @@ for(var i=0; i< buttons.length; i++)
         }
         else if(value == "sign")
         {
+            //change sign of value in display
             display.innerText= eval(parseFloat(display.innerText)*(-1));
         }
         else if(value == '.')
